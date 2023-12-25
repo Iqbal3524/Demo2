@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt update 
-RUN apt install –y httpd  
+RUN apt install –y nginx  
 RUN apt clean 
 EXPOSE 80
-CMD [“httpdctl”, “-D”, “FOREGROUND”]
+CMD [“nginxctl”, “-D”, “FOREGROUND”]
