@@ -1,6 +1,5 @@
 FROM ubuntu
-RUN apt update 
-RUN apt install –y nginx  
-RUN apt clean 
+RUN apt-get -y update 
+RUN && apt-get install –y nginx  
 EXPOSE 80
 CMD [“nginxctl”, “-D”, “FOREGROUND”]
